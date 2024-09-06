@@ -1,0 +1,23 @@
+[package]
+name = "firmware"
+description = "Rust EBAZ4205 firmware"
+version = "0.1.0"
+authors = ["M-Labs"]
+edition = "2018"
+
+[dependencies]
+log = "0.4"
+bit_field = "0.10"
+volatile-register = "0.2"
+
+# libboard_zynq = { git = "https://git.m-labs.hk/M-Labs/zynq-rs.git", features = ["target_ebaz4205", "ipv6"] }
+# libsupport_zynq = { git = "https://git.m-labs.hk/M-Labs/zynq-rs.git", features = ["target_ebaz4205"] }
+# libcortex_a9 = { git = "https://git.m-labs.hk/M-Labs/zynq-rs.git", features = ["power_saving"] }
+# libregister = { git = "https://git.m-labs.hk/M-Labs/zynq-rs.git" }
+# libconfig = { git = "https://git.m-labs.hk/M-Labs/zynq-rs.git", features = ["target_ebaz4205", "ipv6"] }
+
+libboard_zynq = { path = "../../../zynq-rs/libboard_zynq", features = ["target_ebaz4205", "ipv6"] }
+libsupport_zynq = { path = "../../../zynq-rs/libsupport_zynq", features = ["target_ebaz4205"] }
+libcortex_a9 = { path = "../../../zynq-rs/libcortex_a9", features = ["power_saving"] }
+libregister = { path = "../../../zynq-rs/libregister" }
+libconfig = { path = "../../../zynq-rs/libconfig", features = ["target_ebaz4205", "ipv6"] }
