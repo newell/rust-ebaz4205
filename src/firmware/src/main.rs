@@ -1,8 +1,6 @@
 #![no_std]
 #![no_main]
 
-extern crate alloc;
-
 use log::info;
 
 use libcortex_a9::asm;
