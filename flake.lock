@@ -1,0 +1,257 @@
+{
+  "nodes": {
+    "artiq": {
+      "inputs": {
+        "artiq-comtools": "artiq-comtools",
+        "mozilla-overlay": "mozilla-overlay",
+        "nixpkgs": "nixpkgs",
+        "sipyco": "sipyco",
+        "src-migen": "src-migen",
+        "src-misoc": "src-misoc",
+        "src-pythonparser": "src-pythonparser"
+      },
+      "locked": {
+        "lastModified": 1672816435,
+        "narHash": "sha256-cH2i+1eoJ+K9rAxctVjUR5oNWi54USjbtXPYj5a0j7A=",
+        "ref": "refs/heads/master",
+        "rev": "1be7e2a2e1d142802a52792865b19c8874fd0e9d",
+        "revCount": 8257,
+        "type": "git",
+        "url": "https://github.com/m-labs/artiq.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/m-labs/artiq.git"
+      }
+    },
+    "artiq-comtools": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "artiq-zynq",
+          "artiq",
+          "nixpkgs"
+        ],
+        "sipyco": [
+          "artiq-zynq",
+          "artiq",
+          "sipyco"
+        ]
+      },
+      "locked": {
+        "lastModified": 1664405593,
+        "narHash": "sha256-yP441NerlLGig7n+9xHsx8yCtZ+Ggd0VqfBSzc20E04=",
+        "owner": "m-labs",
+        "repo": "artiq-comtools",
+        "rev": "15ddac62813ef623a076ccf982b3bc63d314e651",
+        "type": "github"
+      },
+      "original": {
+        "owner": "m-labs",
+        "repo": "artiq-comtools",
+        "type": "github"
+      }
+    },
+    "artiq-zynq": {
+      "inputs": {
+        "artiq": "artiq",
+        "mozilla-overlay": "mozilla-overlay_2",
+        "zynq-rs": "zynq-rs"
+      },
+      "locked": {
+        "lastModified": 1672970276,
+        "narHash": "sha256-8sj3ju9uyg8dh8gruvgSlkKLgfn3clWBCfKtZHrD/w0=",
+        "ref": "refs/heads/master",
+        "rev": "4a522ecb3b4dbdff2cf89078cc1e2c4120a5b94b",
+        "revCount": 592,
+        "type": "git",
+        "url": "https://git.m-labs.hk/m-labs/artiq-zynq"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.m-labs.hk/m-labs/artiq-zynq"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "mozilla-overlay": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1664789696,
+        "narHash": "sha256-UGWJHQShiwLCr4/DysMVFrYdYYHcOqAOVsWNUu+l6YU=",
+        "owner": "mozilla",
+        "repo": "nixpkgs-mozilla",
+        "rev": "80627b282705101e7b38e19ca6e8df105031b072",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mozilla",
+        "repo": "nixpkgs-mozilla",
+        "type": "github"
+      }
+    },
+    "mozilla-overlay_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1672878308,
+        "narHash": "sha256-0+fl6PHokhtSV+w58z2QD2rTf8QhcOGsT9o4LwHHZHE=",
+        "owner": "mozilla",
+        "repo": "nixpkgs-mozilla",
+        "rev": "d38863db88e100866b3e494a651ee4962b762fcc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mozilla",
+        "repo": "nixpkgs-mozilla",
+        "type": "github"
+      }
+    },
+    "mozilla-overlay_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1664789696,
+        "narHash": "sha256-UGWJHQShiwLCr4/DysMVFrYdYYHcOqAOVsWNUu+l6YU=",
+        "owner": "mozilla",
+        "repo": "nixpkgs-mozilla",
+        "rev": "80627b282705101e7b38e19ca6e8df105031b072",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mozilla",
+        "repo": "nixpkgs-mozilla",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1669735802,
+        "narHash": "sha256-qtG/o/i5ZWZLmXw108N2aPiVsxOcidpHJYNkT45ry9Q=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "731cc710aeebecbf45a258e977e8b68350549522",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-22.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "artiq-zynq": "artiq-zynq"
+      }
+    },
+    "sipyco": {
+      "inputs": {
+        "nixpkgs": [
+          "artiq-zynq",
+          "artiq",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1669369686,
+        "narHash": "sha256-YHez+S3PTUgtuliUNB5WM+RXcj8RKLbHVRvOgELSkwU=",
+        "owner": "m-labs",
+        "repo": "sipyco",
+        "rev": "98db6eacb084c2c5280fb653bee3d313e3ca6df8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "m-labs",
+        "repo": "sipyco",
+        "type": "github"
+      }
+    },
+    "src-migen": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1662111470,
+        "narHash": "sha256-IPyhoFZLhY8d3jHB8jyvGdbey7V+X5eCzBZYSrJ18ec=",
+        "owner": "m-labs",
+        "repo": "migen",
+        "rev": "639e66f4f453438e83d86dc13491b9403bbd8ec6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "m-labs",
+        "repo": "migen",
+        "type": "github"
+      }
+    },
+    "src-misoc": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669779825,
+        "narHash": "sha256-l3lyy6dmbivo9Tppb08KHSyU89ZZG1CCcSjPlNRD210=",
+        "ref": "master",
+        "rev": "2c255775f732a41ba1a512ab3d2547af4e25f674",
+        "revCount": 2435,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/m-labs/misoc.git"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/m-labs/misoc.git"
+      }
+    },
+    "src-pythonparser": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1628745371,
+        "narHash": "sha256-p6TgeeaK4NEmbhimEXp31W8hVRo4DgWmcCoqZ+UdN60=",
+        "owner": "m-labs",
+        "repo": "pythonparser",
+        "rev": "5413ee5c9f8760e95c6acd5d6e88dabb831ad201",
+        "type": "github"
+      },
+      "original": {
+        "owner": "m-labs",
+        "repo": "pythonparser",
+        "type": "github"
+      }
+    },
+    "zynq-rs": {
+      "inputs": {
+        "mozilla-overlay": "mozilla-overlay_3",
+        "nixpkgs": [
+          "artiq-zynq",
+          "artiq",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1669819016,
+        "narHash": "sha256-WvNMUekL4Elc55RdqX8XP43QPnBrK8Rbd0bsoI61E5U=",
+        "ref": "refs/heads/master",
+        "rev": "67dbb5932fa8ff5f143983476f741f945871d286",
+        "revCount": 624,
+        "type": "git",
+        "url": "https://git.m-labs.hk/m-labs/zynq-rs"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.m-labs.hk/m-labs/zynq-rs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
