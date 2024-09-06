@@ -55,7 +55,7 @@
             ];
           }
           ''
-          python ${./src/gateware}/rust-ebaz4205.py -g build
+          python ${./src/gateware}/ebaz4205.py -g build
           mkdir -p $out $out/nix-support
           cp build/top.bit $out
           echo file binary-dist $out/top.bit >> $out/nix-support/hydra-build-products
