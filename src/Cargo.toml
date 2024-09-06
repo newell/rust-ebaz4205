@@ -1,0 +1,11 @@
+[workspace]
+members = [
+  "firmware"
+]
+
+[profile.release]
+panic = "abort"
+debug = true
+codegen-units = 1
+opt-level = 2
+lto = true
