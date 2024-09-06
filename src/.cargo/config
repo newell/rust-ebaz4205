@@ -1,0 +1,9 @@
+[target.armv7-none-eabihf]
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+  "-C", "target-feature=a9,armv7-a,neon",
+  "-C", "target-cpu=cortex-a9",
+]
+
+[build]
+target = "armv7-none-eabihf.json"
