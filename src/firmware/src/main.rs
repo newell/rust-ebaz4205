@@ -3,16 +3,12 @@
 
 extern crate alloc;
 
-// use core::{cmp, str};
 use log::info;
-// use alloc::vec;
 
 use libcortex_a9::asm;
 use libboard_zynq::{
     timer::GlobalTimer,
-    // error_led,
     logger
-    // slcr
 };
 use libsupport_zynq::ram;
 
