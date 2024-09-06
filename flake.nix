@@ -63,7 +63,7 @@
         rust-ebaz4205-jtag = pkgs.runCommand "rust-ebaz4205-jtag" {}
           ''
           mkdir $out
-          ln -s ${zynqpkgs.szl}/szl-redebaz4205.elf $out
+          ln -s ${zynqpkgs.szl}/szl-ebaz4205.elf $out
           ln -s ${rust-ebaz4205-firmware}/firmware.bin $out
           ln -s ${rust-ebaz4205-gateware}/top.bit $out
           '';
@@ -76,7 +76,7 @@
           # can't write software (mkbootimage will segfault).
           bifdir=`mktemp -d`
           cd $bifdir
-          ln -s ${zynqpkgs.szl}/szl-redebaz4205.elf szl.elf
+          ln -s ${zynqpkgs.szl}/szl-ebaz4205.elf szl.elf
           ln -s ${rust-ebaz4205-firmware}/firmware.elf firmware.elf
           ln -s ${rust-ebaz4205-gateware}/top.bit top.bit
           cat > boot.bif << EOF
