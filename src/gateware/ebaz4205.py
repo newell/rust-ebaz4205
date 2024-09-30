@@ -256,14 +256,24 @@ class EBAZ4205(SoCCore):
         platform.add_period_constraint(self.ps7.cd_sys.clk, 10)
 
         self.comb += [
-            # Inputs
             self.ps7.enet0.enet.gmii.tx_clk.eq(gmii.tx_clk),
             self.ps7.enet0.enet.gmii.rx_clk.eq(gmii.rx_clk),
-            self.ps7.enet0.enet.gmii.rx_dv.eq(gmii.rx_dv),
-            self.ps7.enet0.enet.gmii.rxd.eq(gmii.rxd),
-            # Outputs
-            gmii.tx_en.eq(self.ps7.enet0.enet.gmii.tx_en),
+        ]
+
+        self.clock_domains.cd_eth_rx = ClockDomain(reset_less=False)
+        self.clock_domains.cd_eth_tx = ClockDomain(reset_less=False)
+        self.comb += [
+            ClockSignal("eth_rx").eq(gmii.rx_clk),
+            ClockSignal("eth_tx").eq(gmii.tx_clk),
+        ]
+
+        self.sync.eth_tx += [
             gmii.txd.eq(self.ps7.enet0.enet.gmii.txd),
+            gmii.tx_en.eq(self.ps7.enet0.enet.gmii.tx_en),
+        ]
+        self.sync.eth_rx += [
+            self.ps7.enet0.enet.gmii.rxd.eq(gmii.rxd),
+            self.ps7.enet0.enet.gmii.rx_dv.eq(gmii.rx_dv),
         ]
 
         # LEDs
@@ -283,13 +293,19 @@ class EBAZ4205(SoCCore):
         self.comb += [
             mdio.mdc.eq(self.ps7.enet0.enet.mdio.mdc),
         ]
-        self.specials += Instance(
-            "IOBUF",
-            i_I=self.ps7.enet0.enet.mdio.o,
-            io_IO=mdio.mdio,
-            o_O=self.ps7.enet0.enet.mdio.i,
-            i_T=self.ps7.enet0.enet.mdio.t_n,
-        )
+
+        mdio_t = Signal()
+        self.comb += mdio_t.eq(~self.ps7.enet0.enet.mdio.t_n)
+
+        self.specials += [
+            Instance(
+                "IOBUF",
+                i_I=self.ps7.enet0.enet.mdio.o,
+                io_IO=mdio.mdio,
+                o_O=self.ps7.enet0.enet.mdio.i,
+                i_T=mdio_t,
+            )
+        ]
 
 
 def main():
