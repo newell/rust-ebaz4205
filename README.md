@@ -1,12 +1,21 @@
 Rust EBAZ4205
 =============
 
-Minimalist bare metal Rust firmware for EBAZ4205.
+[![Project Status: Deprecated](https://img.shields.io/badge/Project_Status-Deprecated-red)](https://github.com/yourusername/yourrepository)
 
-Development instructions
-------------------------
+This project is not longer maintained!!
 
-TODO
+I used this project as a sandbox for testing and integrating the EBAZ4205 into:
+
+* [zynq-rs](https://git.m-labs.hk/M-Labs/zynq-rs)
+* [artiq-zynq](https://git.m-labs.hk/M-Labs/artiq-zynq)
+* [artiq](https://github.com/m-labs/artiq)
+* [migen](https://github.com/m-labs/migen)
+
+See the commit history in the logs for the changes I introduced to these projects to add support for the EBAZ4205.  
+
+See the blog post I wrote about [Controlling the AD9834 DDS with the Zynq-SoC EBAZ4205 using ARTIQ](https://newell.github.io/projects/ebaz4205/) for more insight.
+
 
 <!-- Pure build with Nix and execution on a remote JTAG server:
 
